@@ -1,0 +1,55 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  @apply bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-200;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-600 rounded-full hover:bg-slate-400 dark:hover:bg-slate-500;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Window styling */
+.window {
+  @apply rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800;
+}
+
+/* Card styling */
+.card-base {
+  @apply rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-md hover:shadow-lg transition-shadow;
+}
+
+/* Draggable element hint */
+.draggable-hint:hover {
+  @apply cursor-grab;
+}
+
+.dragging {
+  @apply cursor-grabbing opacity-80;
+}
